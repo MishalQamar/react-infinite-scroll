@@ -6,16 +6,21 @@ interface TechDemoProps {
   title: string;
   description: string;
   code: string;
-  language?: string;
 }
 
-export const TechDemo = ({ title, description, code, language = 'typescript' }: TechDemoProps) => {
+export const TechDemo = ({
+  title,
+  description,
+  code,
+}: TechDemoProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className="bg-white rounded-lg shadow-sm border overflow-hidden">
       <div className="p-4 border-b">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">
+          {title}
+        </h3>
         <p className="text-gray-600 text-sm">{description}</p>
       </div>
       <div className="relative">
@@ -41,7 +46,8 @@ export const ImplementationShowcase = () => {
   const implementations = [
     {
       title: 'React Query Setup',
-      description: 'Infinite query configuration with cursor-based pagination',
+      description:
+        'Infinite query configuration with cursor-based pagination',
       code: `const {
   data,
   fetchNextPage,
@@ -53,7 +59,7 @@ export const ImplementationShowcase = () => {
   getNextPageParam: (lastPage) => lastPage.metaData.cursor,
   staleTime: 5 * 60 * 1000,
   gcTime: 10 * 60 * 1000,
-});`
+});`,
     },
     {
       title: 'Intersection Observer',
@@ -67,7 +73,7 @@ useEffect(() => {
   if (inView && hasNextPage && !isFetchingNextPage) {
     fetchNextPage();
   }
-}, [inView, fetchNextPage, hasNextPage, isFetchingNextPage]);`
+}, [inView, fetchNextPage, hasNextPage, isFetchingNextPage]);`,
     },
     {
       title: 'Cursor Pagination Query',
@@ -83,19 +89,22 @@ useEffect(() => {
     { createdAt: 'desc' },
     { id: 'desc' }
   ],
-});`
-    }
+});`,
+    },
   ];
 
   return (
     <div className="space-y-6">
       <div className="text-center mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Technical Implementation</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Technical Implementation
+        </h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Explore the key code snippets that power this infinite scroll implementation
+          Explore the key code snippets that power this infinite
+          scroll implementation
         </p>
       </div>
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {implementations.map((impl, index) => (
           <TechDemo
