@@ -883,6 +883,7 @@ export namespace Prisma {
     id: string | null
     title: string | null
     teaser: string | null
+    image: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -891,6 +892,7 @@ export namespace Prisma {
     id: string | null
     title: string | null
     teaser: string | null
+    image: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -899,6 +901,7 @@ export namespace Prisma {
     id: number
     title: number
     teaser: number
+    image: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -909,6 +912,7 @@ export namespace Prisma {
     id?: true
     title?: true
     teaser?: true
+    image?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -917,6 +921,7 @@ export namespace Prisma {
     id?: true
     title?: true
     teaser?: true
+    image?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -925,6 +930,7 @@ export namespace Prisma {
     id?: true
     title?: true
     teaser?: true
+    image?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -1006,6 +1012,7 @@ export namespace Prisma {
     id: string
     title: string
     teaser: string
+    image: string
     createdAt: Date
     updatedAt: Date
     _count: ArticleCountAggregateOutputType | null
@@ -1031,6 +1038,7 @@ export namespace Prisma {
     id?: boolean
     title?: boolean
     teaser?: boolean
+    image?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["article"]>
@@ -1039,6 +1047,7 @@ export namespace Prisma {
     id?: boolean
     title?: boolean
     teaser?: boolean
+    image?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["article"]>
@@ -1047,6 +1056,7 @@ export namespace Prisma {
     id?: boolean
     title?: boolean
     teaser?: boolean
+    image?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["article"]>
@@ -1055,11 +1065,12 @@ export namespace Prisma {
     id?: boolean
     title?: boolean
     teaser?: boolean
+    image?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type ArticleOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "teaser" | "createdAt" | "updatedAt", ExtArgs["result"]["article"]>
+  export type ArticleOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "teaser" | "image" | "createdAt" | "updatedAt", ExtArgs["result"]["article"]>
 
   export type $ArticlePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Article"
@@ -1068,6 +1079,7 @@ export namespace Prisma {
       id: string
       title: string
       teaser: string
+      image: string
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["article"]>
@@ -1496,6 +1508,7 @@ export namespace Prisma {
     readonly id: FieldRef<"Article", 'String'>
     readonly title: FieldRef<"Article", 'String'>
     readonly teaser: FieldRef<"Article", 'String'>
+    readonly image: FieldRef<"Article", 'String'>
     readonly createdAt: FieldRef<"Article", 'DateTime'>
     readonly updatedAt: FieldRef<"Article", 'DateTime'>
   }
@@ -1882,6 +1895,7 @@ export namespace Prisma {
     id: 'id',
     title: 'title',
     teaser: 'teaser',
+    image: 'image',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -1962,6 +1976,7 @@ export namespace Prisma {
     id?: StringFilter<"Article"> | string
     title?: StringFilter<"Article"> | string
     teaser?: StringFilter<"Article"> | string
+    image?: StringFilter<"Article"> | string
     createdAt?: DateTimeFilter<"Article"> | Date | string
     updatedAt?: DateTimeFilter<"Article"> | Date | string
   }
@@ -1970,6 +1985,7 @@ export namespace Prisma {
     id?: SortOrder
     title?: SortOrder
     teaser?: SortOrder
+    image?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -1981,6 +1997,7 @@ export namespace Prisma {
     NOT?: ArticleWhereInput | ArticleWhereInput[]
     title?: StringFilter<"Article"> | string
     teaser?: StringFilter<"Article"> | string
+    image?: StringFilter<"Article"> | string
     createdAt?: DateTimeFilter<"Article"> | Date | string
     updatedAt?: DateTimeFilter<"Article"> | Date | string
   }, "id">
@@ -1989,6 +2006,7 @@ export namespace Prisma {
     id?: SortOrder
     title?: SortOrder
     teaser?: SortOrder
+    image?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: ArticleCountOrderByAggregateInput
@@ -2003,6 +2021,7 @@ export namespace Prisma {
     id?: StringWithAggregatesFilter<"Article"> | string
     title?: StringWithAggregatesFilter<"Article"> | string
     teaser?: StringWithAggregatesFilter<"Article"> | string
+    image?: StringWithAggregatesFilter<"Article"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Article"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Article"> | Date | string
   }
@@ -2011,6 +2030,7 @@ export namespace Prisma {
     id?: string
     title: string
     teaser: string
+    image: string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -2019,6 +2039,7 @@ export namespace Prisma {
     id?: string
     title: string
     teaser: string
+    image: string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -2027,6 +2048,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     teaser?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -2035,6 +2057,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     teaser?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -2043,6 +2066,7 @@ export namespace Prisma {
     id?: string
     title: string
     teaser: string
+    image: string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -2051,6 +2075,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     teaser?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -2059,6 +2084,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     teaser?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -2093,6 +2119,7 @@ export namespace Prisma {
     id?: SortOrder
     title?: SortOrder
     teaser?: SortOrder
+    image?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -2101,6 +2128,7 @@ export namespace Prisma {
     id?: SortOrder
     title?: SortOrder
     teaser?: SortOrder
+    image?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -2109,6 +2137,7 @@ export namespace Prisma {
     id?: SortOrder
     title?: SortOrder
     teaser?: SortOrder
+    image?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }

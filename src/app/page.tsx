@@ -75,7 +75,7 @@ export default function InfiniteScrollPortfolio() {
 
         {/* Footer */}
         <footer className="mt-16 text-center text-sm text-gray-500">
-          <p>
+          <p id="scroll-message">
             Scroll down to experience the infinite scroll
             implementation
           </p>

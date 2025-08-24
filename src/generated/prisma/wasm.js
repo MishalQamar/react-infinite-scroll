@@ -124,6 +124,7 @@ exports.Prisma.ArticleScalarFieldEnum = {
   id: 'id',
   title: 'title',
   teaser: 'teaser',
+  image: 'image',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
